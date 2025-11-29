@@ -1,0 +1,74 @@
+.newProduct {
+    flex: 4;
+}
+
+.apiFind {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.apiFind>input {
+    padding: 10px;
+}
+
+.addMovieContainer {
+    display: flex;
+}
+
+.addProductForm {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.moviePreview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.moviePreview img {
+    max-width: 100%;
+}
+
+
+.addProductItem {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.addProductItem>label {
+    color: gray;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.addProductItem>input {
+    padding: 10px;
+}
+
+.addProductItem>select {
+    padding: 10px;
+}
+
+.addProductButton {
+    margin-top: 10px;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: darkblue;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    height: 30px;
+    align-self: center;
+}

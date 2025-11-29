@@ -1,0 +1,181 @@
+.movie {
+    position: absolute;
+    height: 90vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.movieContainer {
+    display: flex;
+    margin-top: 70vh;
+    color: white;
+    gap: 10px;
+    padding: 0px 7vw;
+
+    .movieContainerLeft {
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+        padding: 30px;
+        border-radius: 20px;
+        gap: 15px;
+        text-align: justify;
+        background-color: rgba(37, 36, 36, 0.3);
+
+        img {
+            width: 40%;
+            border-radius: 10px;
+        }
+
+        .tags {
+            margin-bottom: 15px;
+
+            span {
+                margin-right: 10px;
+                border: 1px solid white;
+                padding: 5px;
+                border-radius: 10px;
+            }
+        }
+
+        .movieInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    .movieContainerRight {
+        flex: 5;
+        background-color: rgba(37, 36, 36, 0.3);
+        border-radius: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        .containerTop {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .buttonGroup {
+                display: flex;
+                gap: 50px;
+                align-items: center;
+
+                .movieButton {
+                    cursor: pointer;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+                    transition: opacity 0.3s;
+
+                    &:first-child {
+                        background-color: rgb(255, 0, 0);
+                        padding: 20px;
+                        border-radius: 50px;
+                        flex-direction: row;
+                        align-items: center;
+                        gap: 20px;
+                    }
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .movieRating {
+                cursor: pointer;
+                transition: opacity 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background: linear-gradient(39deg, rgba(254, 207, 89, 1), rgba(255, 241, 204, 1));
+                padding: 20px;
+                border-radius: 50px;
+                color: black;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        .containerMid {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .containerDesc {
+                display: flex;
+                gap: 10px;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+
+                li {
+                    width: 45px;
+                    background-color: rgb(41, 40, 40);
+                    padding: 12px 35px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: opacity 0.5s;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    text-align: center;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            .review {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+
+                img {
+                    height: 50px;
+                    border-radius: 100%;
+                }
+
+                .reviewText {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .reviewUser {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 30px;
+                        align-items: flex-end;
+
+                        span {
+                            color: gray;
+                            font-size: 14px;
+                        }
+                    }
+
+                    p {
+                        color: rgb(181, 181, 181);
+                    }
+                }
+            }
+        }
+    }
+}

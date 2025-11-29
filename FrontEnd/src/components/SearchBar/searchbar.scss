@@ -1,0 +1,171 @@
+.search-container {
+  position: relative;
+  
+  .navbar-search-form {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      color: white;
+      width: 200px;
+      transition: width 0.3s ease;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: rgba(255, 255, 255, 0.4);
+        width: 250px; // Tăng width khi focus
+      }
+    }
+
+    .search-btn {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+      padding: 5px;
+
+      .icon {
+        color: white;
+      }
+    }
+  }
+  &.scrolled {
+    .navbar-search-form {
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: all 0.3s ease;
+    }
+  }
+
+
+  .search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 1000;
+    width: 100%;
+
+    .loading, .no-results {
+      padding: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+    }
+
+    .suggestions-list {
+      max-height: 400px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 3px;
+      }
+    }
+
+    .suggestion-item {
+      display: flex;
+      padding: 12px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .movie-poster {
+        flex-shrink: 0;
+        width: 50px;
+        height: 75px;
+        margin-right: 12px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 4px;
+        }
+      }
+
+      .movie-info {
+        flex-grow: 1;
+        overflow: hidden;
+
+        .movie-title {
+          color: white;
+          font-weight: bold;
+          margin-bottom: 4px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .movie-desc {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 0.9em;
+          margin-bottom: 4px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .movie-meta {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 0.8em;
+
+          span {
+            margin-right: 10px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .show-more {
+      padding: 12px;
+      color: #007bff;
+      cursor: pointer;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: 500;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}

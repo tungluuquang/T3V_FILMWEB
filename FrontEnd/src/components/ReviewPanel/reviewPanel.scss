@@ -1,0 +1,113 @@
+.reviewPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.5s;
+
+    .container {
+        width: 30%;
+        height: 50%;
+        background-color: #2A314E;
+        padding: 30px;
+        border-radius: 15px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+
+        .containerTop {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            .ratingInfo {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                span {
+
+                    &:first-child {
+                        font-weight: 1000;
+                    }
+                }
+            }
+        }
+
+        .containerMid {
+            // margin-top: 30px;
+            background-color: rgba(0, 0, 0, .3);
+            padding: 30px 20px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .ratingWrapper {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 15px;
+
+                .icon {
+                    transition: opacity 0.5s;
+
+                    &:hover {
+                        opacity: 0.3;
+                    }
+                }
+            }
+
+            .clicked {
+                background-color: #1f327e;
+            }
+        }
+
+        textarea {
+            // margin-top: 30px;
+            height: 100px;
+            background-color: transparent;
+            border: 1px solid rgb(172, 171, 171);
+            border-radius: 15px;
+            color: rgb(255, 255, 255);
+            padding: 20px;
+            text-wrap: wrap;
+        }
+
+        .buttonGroup {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+
+            button {
+                cursor: pointer;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background: rgb(216, 216, 216);
+                transition: opacity 0.5s;
+
+
+                &:first-child {
+                    background: linear-gradient(39deg, rgba(254, 207, 89, 1), rgba(255, 241, 204, 1));
+                }
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

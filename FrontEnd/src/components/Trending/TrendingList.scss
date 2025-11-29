@@ -1,0 +1,76 @@
+.trending-list {
+  margin: 30px 0;
+  position: relative;
+  color: white;
+  margin-left: 1rem;
+  .trending-title {
+    margin-left: 1rem;
+    margin-bottom: 0.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+  }
+
+  h3 {
+    margin-left: 100px;
+    color: white;
+  }
+
+  .scroll-wrapper-main {
+    position: relative;
+    padding: 0 40px;
+
+    .scroll-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .trending-scroll {
+      display: flex;
+      overflow-x: hidden;
+      padding: 20px 10px;
+      scroll-behavior: smooth;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      gap: 20px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-30%);
+      z-index: 15;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+
+      &.left {
+        left: 5px;
+      }
+
+      &.right {
+        right: 5px;
+      }
+
+      svg {
+        font-size: 18px;
+      }
+    }
+  }
+}

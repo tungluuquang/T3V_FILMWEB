@@ -1,0 +1,159 @@
+.film-info-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to top, #000, rgba(0, 0, 0, 0.6));
+  color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 90%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  scrollbar-width: thin;
+  scrollbar-color: #444 #111;
+
+  // Scrollbar for Webkit (Chrome, Safari, Edge)
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+    border: 2px solid #111;
+  }
+
+  img {
+    margin-top: 10px;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .wrapper-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .item {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 1px solid aliceblue;
+      color: aliceblue;
+    }
+
+    .add-item {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transition: transform 0.2s ease;
+      font-size: 1.5rem;
+
+      &:hover {
+        transform: scale(1.2);
+        color: #e50914;
+      }
+
+      svg {
+        font-size: 2rem;
+      }
+    }
+
+    .play-container-info {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .playBtn {
+        font-size: 1.8rem;
+        color: #fff;
+        display: flex;
+        align-items: center;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #fff;
+        margin: 0;
+      }
+    }
+  }
+
+  .desc {
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.3s ease;
+    }
+
+    &.expanded {
+      p {
+        -webkit-line-clamp: unset;
+        display: block;
+      }
+    }
+
+    .toggle-show {
+      color: #e50914;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      display: inline-block;
+
+      &:hover {
+        color: #ff4c4c;
+      }
+    }
+  }
+}

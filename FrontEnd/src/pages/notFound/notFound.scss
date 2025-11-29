@@ -1,0 +1,29 @@
+.notFound {
+    display: flex;
+
+    .title {
+        font-size: large;
+        height: 90vh;
+        flex: 1;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            background-color: inherit;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

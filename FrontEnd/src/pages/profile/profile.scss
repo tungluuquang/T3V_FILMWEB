@@ -1,0 +1,136 @@
+.profileContainer {
+    display: flex;
+    color: white;
+    padding: 100px;
+
+    label {
+        cursor: pointer;
+    }
+
+    .leftContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid gray;
+        border-right: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        background-color: rgb(21, 21, 21);
+        padding: 40px;
+        gap: 20px;
+
+        img {
+            width: 70%;
+            border-radius: 5px;
+        }
+
+        .inputField {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+                padding: 15px;
+                border: none;
+                border-radius: 10px;
+            }
+        }
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: opacity 0.5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .rightContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex: 3;
+        border: 1px solid gray;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgb(21, 21, 21);
+        padding: 40px;
+        gap: 20px;
+
+        .header {
+            width: 100%;
+
+            p {
+                margin-top: 5px;
+                color: gray;
+            }
+        }
+
+        .inputField {
+            width: 49%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+                padding: 15px;
+                // background-color: inherit;
+                border: none;
+                border-radius: 10px;
+            }
+
+            select {
+                padding: 15px;
+                border-radius: 10px;
+                border: none;
+            }
+
+            .radioGroup {
+                display: flex;
+                gap: 1rem;
+                margin-top: 0.5rem;
+                gap: 20px;
+
+                .radioItem {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+
+                .radioItem input[type='radio'] {
+                    accent-color: #4f46e5;
+                    /* or any primary color you want */
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: red;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.5s;
+
+            &:hover {
+                opacity: 0.5;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+            }
+        }
+    }
+}

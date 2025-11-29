@@ -1,0 +1,81 @@
+.search {
+  background-color: var(--main-color);
+  min-height: 100vh;
+  .search-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+    padding-top: 80px;
+    .row-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 20px;
+      .icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+      .category-name {
+        font-weight: 700;
+        font-size: 24px;
+        color: white;
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .tab-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      min-height: 70vh;
+      flex: 1 1 auto;
+      .movie-grid,
+      .MuiBox-root {
+        flex: 1 1 auto;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 32px 24px;
+        padding: 20px 0 0 0;
+        align-items: start;
+      }
+      .search-card-wrapper {
+        height: auto !important;
+        min-height: unset !important;
+        max-height: unset !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .pagination {
+        margin-top: 0;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        min-height: 56px;
+        width: 100%;
+        background: var(--main-color);
+        z-index: 1;
+        position: static !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .search .search-content .tab-content .movie-grid,
+  .search .search-content .tab-content .MuiBox-root {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px 8px;
+    align-items: start;
+  }
+}
+@media (max-width: 600px) {
+  .search .search-content .tab-content .movie-grid,
+  .search .search-content .tab-content .MuiBox-root {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px 4px;
+    align-items: start;
+  }
+}
